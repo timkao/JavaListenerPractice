@@ -20,12 +20,10 @@ public class SimpleGui1 {
         label = new JLabel("This is the label");
 
         panelButton = new JButton("Paint it randomly");
-        PanelActionListener panelActionListener = new PanelActionListener();
-        panelButton.addActionListener(panelActionListener);
+        panelButton.addActionListener(new PanelActionListener());
 
         labelButton = new JButton("Change Text");
-        LabelActionListener labelActionListener = new LabelActionListener();
-        labelButton.addActionListener(labelActionListener);
+        labelButton.addActionListener(new LabelActionListener());
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(BorderLayout.SOUTH, panelButton);
