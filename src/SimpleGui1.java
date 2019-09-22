@@ -20,19 +20,13 @@ public class SimpleGui1 {
         label = new JLabel("This is the label");
 
         panelButton = new JButton("Paint it randomly");
-        panelButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                panel.repaint();
-            }
+        panelButton.addActionListener((ActionEvent e) -> {
+            panel.repaint();
         });
 
         labelButton = new JButton("Change Text");
-        labelButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                label.setText("Changed it");
-            }
+        labelButton.addActionListener((ActionEvent e) -> {
+            label.setText("Changed it");
         });
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
